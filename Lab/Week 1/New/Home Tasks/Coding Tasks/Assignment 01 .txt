@@ -1,0 +1,196 @@
+|````````````````````|
+|                    |
+| Question Number 1  |
+|                    |
+``````````````````````
+
+
+public class main {
+    public static void main(String[] args) {
+        
+        long min = 3456789;
+
+        double total_days = min / (60 * 24);
+
+        double years = total_days / 365;
+        double days = total_days % 365;
+
+        System.out.printf("Given Minute is   : %d\n", min);
+        System.out.printf("Which is equal to : %d years & %d days\n", (int)years, (int)days);
+    }
+}
+
+
+|````````````````````````````````````````````````````````````````````````````````````````````````|
+|                                   OUTPUT                                                       |
+|                                                                                                |
+|````````````````````````````````````````````````````````````````````````````````````````````````|
+|     Given Minute is   : 3456789                                                                |
+|     Which is equal to : 6 years & 210 days                                                     |
+|                                                                                                |
+``````````````````````````````````````````````````````````````````````````````````````````````````
+
+
+================================================================================================================================================================
+
+
+|````````````````````|
+|                    |
+| Question Number 2  |
+|                    |
+``````````````````````
+
+
+public class main {
+    public static void main(String[] args) {
+
+        int a = 2;
+        int b = 5;  
+        int c = 8;
+
+        int d =( 2 * b *( ( c - a ) / 3 ) + 7);
+
+        System.out.println("The value of a=" + a + " b=" + b + " c=" + c );
+        
+        System.out.println("\nThe value of d is: " + d);
+        
+    }
+}
+
+
+|````````````````````````````````````````````````````````````````````````````````````````````````|
+|                                   OUTPUT                                                       |
+|                                                                                                |
+|````````````````````````````````````````````````````````````````````````````````````````````````|
+|     The value of a=2 b=5 c=8                                                                   |
+|                                                                                                |
+|     The value of d is: 27                                                                      |
+|                                                                                                |
+``````````````````````````````````````````````````````````````````````````````````````````````````
+
+
+================================================================================================================================================================
+
+
+|````````````````````|
+|                    |
+| Question Number 3  |
+|                    |
+``````````````````````
+
+
+public class main {
+    public static void main(String[] args) {
+
+        int sid = 24110031;
+
+        int last_two_digit = sid % 100;
+        int last_digit = last_two_digit % 10;
+        int last_second_digit = last_two_digit / 10;
+
+        System.out.printf("\nMy SID is                    :  %8d\n", sid);
+        System.out.printf("Last digit of sid is         :%10d\n", last_digit);
+        System.out.printf("Second Last digit of sid is  :%10d\n\n", last_second_digit);
+        System.out.printf("Both digits together         :%10d\n", last_two_digit);
+        System.out.printf("Both digits reversed together:%9d%d\n\n", last_digit, last_second_digit);
+    
+    }
+}
+
+
+|````````````````````````````````````````````````````````````````````````````````````````````````|
+|                                   OUTPUT                                                       |
+|                                                                                                |
+|````````````````````````````````````````````````````````````````````````````````````````````````|
+|     My SID is                    :  24110031                                                   |
+|     Last digit of sid is         :         1                                                   |
+|     Second Last digit of sid is  :         3                                                   |
+|                                                                                                |
+|     Both digits together         :        31                                                   |
+|     Both digits reversed together:        13                                                   |
+|                                                                                                |
+``````````````````````````````````````````````````````````````````````````````````````````````````
+
+
+================================================================================================================================================================
+
+
+|````````````````````|
+|                    |
+| Question Number 4  |
+|                    |
+``````````````````````
+
+
+public class main {
+    public static void main(String[] args) {
+        double  a = 8.0;  //given
+        double  b = 3.0;  //given 
+
+        double c = (Math.sqrt(( Math.pow(a/2, 2) + Math.pow(b, 2) )));  //one side of Hexagon 
+        System.out.println("The side of Hexagon is          : " + c);
+
+        double area = (((3* Math.sqrt(3))/2) * c * c);
+        System.out.println("The area of Hexagon is          : " + area);
+
+        double circumference = (6 * c);
+        System.out.println("The circumference of Hexagon is : " + circumference);
+
+    }
+}
+
+
+|````````````````````````````````````````````````````````````````````````````````````````````````|
+|                                   OUTPUT                                                       |
+|                                                                                                |
+|````````````````````````````````````````````````````````````````````````````````````````````````|
+|    The side of Hexagon is          : 5.0                                                       |
+|    The area of Hexagon is          : 64.9519052838329                                          |
+|    The circumference of Hexagon is : 30.0                                                      |
+|                                                                                                |
+``````````````````````````````````````````````````````````````````````````````````````````````````
+
+
+================================================================================================================================================================
+
+
+|````````````````````|
+|                    |
+| Question Number 5  |
+|                    |
+``````````````````````
+
+
+public class main{
+    public static void main(String[] args) {
+        double a = 4.5; // given
+        double b = 9.5; // given
+
+        double c = Math.sqrt( Math.pow(a, 2) + Math.pow(b, 2) );
+
+        double SinA = a / c;
+        double CosA = b / c;
+        double SinB = b / c;
+        double CosB = a / c;
+
+        System.out.println("SinA: " + SinA);
+        System.out.println("CosA: " + CosA);
+        System.out.println("SinB: " + SinB);
+        System.out.println("CosB: " + CosB);
+
+    }
+}
+
+
+|````````````````````````````````````````````````````````````````````````````````````````````````|
+|                                   OUTPUT                                                       |
+|                                                                                                |
+|````````````````````````````````````````````````````````````````````````````````````````````````|
+|    SinA: 0.42808634473904467                                                                   |
+|    CosA: 0.9037378388935388                                                                    |
+|    SinB: 0.9037378388935388                                                                    |
+|    CosB: 0.42808634473904467                                                                   |
+|                                                                                                |
+``````````````````````````````````````````````````````````````````````````````````````````````````
+
+==================================================================================================================================================================

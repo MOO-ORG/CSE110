@@ -1,3 +1,61 @@
+# MacOS system files
 .DS_Store
+
+# LibreOffice temporary files
+.~lock.*
+*.tmp
+
+# Microsoft Office temporary files
+~$*.*
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Thumbnail files
+Thumbs.db
+ehthumbs.db
+
+# Log files
+*.log
+
+# Temporary directories
+tmp/
+temp/
+
+# IDE and Editor files
+*.swp
+*.swo
+*~
+
+# Compiled output
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
 *.class
-GitAutoMo.exe
+
+# Package files
+*.jar
+
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Environment and configuration
+.env
+.env.local
+.env.*.local
+config.local.*
+
+
+# System files (additional)
+*.lnk
+.fuse_hidden*
+.directory
+.Trash-*

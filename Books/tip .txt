@@ -1,0 +1,21 @@
+Beginner:
+Head First Java by Kathy Sierra & Bert Bates
+Think Java by Allen B. Downey & Chris Mayfield
+Java: A Beginner's Guide by Herbert Schildt
+Core Java Volume I – Fundamentals by Cay S. Horstmann
+
+
+Intermediate:
+Effective Java by Joshua Bloch
+Java How to Program (Early Objects) by Paul Deitel & Harvey Deitel
+
+
+Advanced:
+Java Performance: The Definitive Guide by Scott Oaks
+Java Concurrency in Practice by Brian Goetz
+
+
+Specialized:
+Spring in Action by Craig Walls
+Design Patterns by Erich Gamma et al.
+Programming Interviews Exposed by John Mongan et al.
