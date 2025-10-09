@@ -4,48 +4,42 @@
 
 ```java
 public class Tracing3 {
-  public static void main(String[] args) {
+
+    public static void main(String[] args) {
         int p = 5;
         int q = 6;
         int r = 9;
         int sum = 0;
         if (p < 12) {
-                  System.out.println(r + 2);
+            System.out.println(r + 2);
+        } else {
+            System.out.println(r + p);
         }
-        else {
-                  System.out.println(r + p);
-        }
-        if (q > 20){
-              System.out.println(r + 19);
-        }
-        else if (q <= 6) {
-                  System.out.println(q + 3);
-        }
-        else{
-                  System.out.println(p + q + r);
+        if (q > 20) {
+            System.out.println(r + 19);
+        } else if (q <= 6) {
+            System.out.println(q + 3);
+        } else {
+            System.out.println(p + q + r);
         }
         if (r > 15) {
-                  System.out.println(r);
-        }
-        else if (r == 0) {
-                  System.out.println(p + q);
-        }
-        else {
-                  System.out.println(p);
+            System.out.println(r);
+        } else if (r == 0) {
+            System.out.println(p + q);
+        } else {
+            System.out.println(p);
         }
         if (sum != 0) {
-                  System.out.println(3);
+            System.out.println(3);
+        } else {
+            System.out.println(sum + 32);
         }
-        else {
-                  System.out.println(sum + 32);
+        if (p > 0 && r < 10) {
+            System.out.println(p + r);
+        } else {
+            System.out.println(p - r);
         }
-        if(p > 0 && r < 10){
-                  System.out.println(p + r);
-        }
-        else {
-                  System.out.println(p - r);
-        }
-  }
+    }
 }
 ```
 
@@ -74,10 +68,9 @@ int sum = 0;
 
 ```java
 if (p < 12) {
-      System.out.println(r + 2);
-}
-else {
-      System.out.println(r + p);
+    System.out.println(r + 2);
+} else {
+    System.out.println(r + p);
 }
 ```
 
@@ -100,14 +93,12 @@ Step 2: Print r + 2 = 9 + 2 = 11
 ## **Second If-Else-If Statement**
 
 ```java
-if (q > 20){
-      System.out.println(r + 19);
-}
-else if (q <= 6) {
-      System.out.println(q + 3);
-}
-else{
-      System.out.println(p + q + r);
+if (q > 20) {
+    System.out.println(r + 19);
+} else if (q <= 6) {
+    System.out.println(q + 3);
+} else {
+    System.out.println(p + q + r);
 }
 ```
 
@@ -135,13 +126,11 @@ Step 3: Print q + 3 = 6 + 3 = 9
 
 ```java
 if (r > 15) {
-      System.out.println(r);
-}
-else if (r == 0) {
-      System.out.println(p + q);
-}
-else {
-      System.out.println(p);
+    System.out.println(r);
+} else if (r == 0) {
+    System.out.println(p + q);
+} else {
+    System.out.println(p);
 }
 ```
 
@@ -169,10 +158,9 @@ Step 3: Print p = 5
 
 ```java
 if (sum != 0) {
-      System.out.println(3);
-}
-else {
-      System.out.println(sum + 32);
+    System.out.println(3);
+} else {
+    System.out.println(sum + 32);
 }
 ```
 
@@ -195,11 +183,10 @@ Step 2: Print sum + 32 = 0 + 32 = 32
 ## **Fifth If-Else Statement (Compound Condition)**
 
 ```java
-if(p > 0 && r < 10){
-      System.out.println(p + r);
-}
-else {
-      System.out.println(p - r);
+if (p > 0 && r < 10) {
+    System.out.println(p + r);
+} else {
+    System.out.println(p - r);
 }
 ```
 
