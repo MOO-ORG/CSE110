@@ -1,0 +1,324 @@
+|````````````````````|
+|                    |
+|       Task 1       |
+|                    |
+``````````````````````
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.printf("%-35s: ", "Please enter an integer number");
+        int number = scanner.nextInt();
+
+        if (number % 5 == 0 && number % 7 == 0) {
+            System.out.printf("Yes! The number %d is divisible by both 5 and 7%n", number);
+        } else if (number % 5 == 0) {
+            System.out.println("Only Divisible by 5");
+        } else if (number % 7 == 0) {
+            System.out.println("Only Divisible by 7");
+        } else {
+            System.out.printf("No! The number %d is not divisible by both 5 and 7%n", number);
+        }
+        scanner.close();
+    }
+}
+
+
+
+================================================================================================================================================================
+
+
+
+|````````````````````|
+|                    |
+|       Task 2       |
+|                    |
+``````````````````````
+
+
+
+import java.util.Scanner;
+
+public class Task2 {
+
+    public static double discountAmount(double number) {
+        return number / 100.0;
+    }
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.printf("%-30s : ", "Enter age");
+        int age = sc.nextInt();
+
+        System.out.printf("%-30s : ", "Electricity consumed: ");
+        int electricityConsumed = sc.nextInt();
+
+        System.out.println();
+
+        if (electricityConsumed <= 0) {
+            System.out.println("Invalid electricity consumed entered.");
+            sc.close();
+            return;
+        }
+
+        if (age <= 0) {
+            System.out.println("Invalid age entered.");
+            sc.close();
+            return;
+        }
+
+        double totalBill = 0.0;
+        double ratePerUnit = 15.0;
+
+        double baseBill = ratePerUnit * electricityConsumed;
+
+        if (age < 18) {
+            totalBill = baseBill - discountAmount(20) * baseBill;
+        } else if (age >= 18 && age <= 60) {
+            totalBill = baseBill;
+        } else if (age > 60) {
+            totalBill = baseBill - discountAmount(10) * baseBill;
+
+            if (electricityConsumed > 100) {
+                totalBill += discountAmount(5) * totalBill;
+            }
+        }
+
+        System.out.printf("%-30s : %.1f Taka\n", "Total bill", totalBill);
+        sc.close();
+    }
+}
+
+
+
+================================================================================================================================================================
+
+
+
+|````````````````````|
+|                    |
+|       Task 3       |
+|                    |
+``````````````````````
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.printf("%-25s : ", "Enter the first Number");
+        float num1 = scanner.nextFloat();
+
+        System.out.printf("%-25s : ", "Enter the second Number");
+        float num2 = scanner.nextFloat();
+
+        System.out.printf("%-25s : ", "Enter the third Number");
+        float num3 = scanner.nextFloat();
+
+        float max = 0;
+        float min = 0;
+
+        if (num1 > num2) {
+            if (num1 > num3) {
+                max = num1;
+            } else {
+                max = num3;
+            }
+        } else if (num2 > num3) {
+            max = num2;
+        } else {
+            max = num3;
+        }
+
+        if (num1 < num2) {
+            if (num1 < num3) {
+                min = num1;
+            } else {
+                min = num3;
+            }
+        } else if (num2 < num3) {
+            min = num2;
+        } else {
+            min = num3;
+        }
+
+        System.out.println();
+        System.out.printf("%-25s : %.2f%n", "Maximum number is", max);
+        System.out.printf("%-25s : %.2f%n", "Minimum number is", min);
+
+        scanner.close();
+    }
+}
+
+
+
+================================================================================================================================================================
+
+
+
+|````````````````````|
+|                    |
+|       Task 4       |
+|                    |
+``````````````````````
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.printf("%-30s : ", "Please enter first length");
+        int num1 = scanner.nextInt();
+
+        System.out.printf("%-30s : ", "Please enter second length");
+        int num2 = scanner.nextInt();
+
+        System.out.printf("%-30s : ", "Please enter third length");
+        int num3 = scanner.nextInt();
+
+        System.out.println();
+
+        if (num1 == num2 && num2 == num3) {
+            System.out.println("This is an Equilateral triangle");
+        } else if (num1 == num2 || num1 == num3 || num2 == num3) {
+            System.out.println("This is an Isosceles triangle");
+        } else {
+            System.out.printf("This is a Scalene triangle");
+        }
+
+        scanner.close();
+    }
+}
+
+
+
+================================================================================================================================================================
+
+
+|````````````````````|
+|                    |
+|       Task 5       |
+|                    |
+``````````````````````
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.printf("%-45s : ", "Please enter the amount to pay");
+        int amount_to_pay = scanner.nextInt();
+
+        System.out.printf("%-45s : ", "Please enter the amount customer has given");
+        int amount_given = scanner.nextInt();
+
+        if (amount_to_pay < amount_given) {
+            int change = amount_given - amount_to_pay;
+
+            System.out.printf("%-45s : %d %n", "The customer gets back BDT", change);
+
+            int hundred = 0, fifty = 0, twenty = 0, ten = 0, five = 0, two = 0, one = 0;
+
+            if (change >= 100) {
+                hundred = change / 100;
+                change = change % 100;
+            }
+            if (change >= 50) {
+                fifty = change / 50;
+                change = change % 50;
+            }
+            if (change >= 20) {
+                twenty = change / 20;
+                change = change % 20;
+            }
+            if (change >= 10) {
+                ten = change / 10;
+                change = change % 10;
+            }
+            if (change >= 5) {
+                five = change / 5;
+                change = change % 5;
+            }
+            if (change >= 2) {
+                two = change / 2;
+                change = change % 2;
+            }
+            if (change >= 1) {
+                one = change / 1;
+                change = change % 1;
+            }
+
+            System.out.printf("%-45s : %d %n", "100 taka note", hundred);
+            System.out.printf("%-45s : %d %n", "50 taka note", fifty);
+            System.out.printf("%-45s : %d %n", "20 taka note", twenty);
+            System.out.printf("%-45s : %d %n", "10 taka note", ten);
+            System.out.printf("%-45s : %d %n", "5 taka coin", five);
+            System.out.printf("%-45s : %d %n", "2 taka coin", two);
+            System.out.printf("%-45s : %d %n", "1 taka coin", one);
+        } else if (amount_to_pay > amount_given) {
+            System.out.printf("%-45s : %d %n", "The customer needs to pay more BDT", amount_to_pay - amount_given);
+        } else {
+            System.out.println("The returned amount is 0 taka");
+        }
+
+        scanner.close();
+    }
+}
+
+
+================================================================================================================================================================
+
+
+|````````````````````|
+|                    |
+|       Task 6       |
+|                    |
+``````````````````````
+
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Input the 1st number: ");
+        int num1 = scanner.nextInt();
+        
+        System.out.print("Input the 2nd number: ");
+        int num2 = scanner.nextInt();
+        
+        System.out.print("Input the 3rd number: ");
+        int num3 = scanner.nextInt();
+        
+        if (num1 == num2 && num2 == num3) {
+            System.out.println("All numbers are equal");
+        } else if (num1 != num2 && num1 != num3 && num2 != num3) {
+            System.out.println("All numbers are different");
+        } else {
+            System.out.println("Neither all are equal nor different");
+        }
+        
+        scanner.close();
+    }
+}
+
+
+
+================================================================================================================================================================
