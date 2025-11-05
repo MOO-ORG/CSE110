@@ -50,5 +50,8 @@ public class Task2 {
 
         System.out.printf("%-30s : %.1f Taka\n", "Total bill", totalBill);
         sc.close();
+        
     }
 }
+
+

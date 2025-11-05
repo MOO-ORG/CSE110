@@ -84,10 +84,10 @@ public class Task2 {
             totalBill = baseBill;
         } else if (age > 60) {
             totalBill = baseBill - discountAmount(10) * baseBill;
+        }
 
-            if (electricityConsumed > 100) {
-                totalBill += discountAmount(5) * totalBill;
-            }
+        if (electricityConsumed > 100) {
+            totalBill += discountAmount(5) * totalBill;
         }
 
         System.out.printf("%-30s : %.1f Taka\n", "Total bill", totalBill);
